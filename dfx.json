@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "AnonChat": {
+      "main": "src/AnonChat/main.mo",
+      "type": "motoko"
+    },
+    "AnonChat_assets": {
+      "dependencies": [
+        "AnonChat"
+      ],
+      "frontend": {
+        "entrypoint": "src/AnonChat_assets/src/index.html"
+      },
+      "source": [
+        "src/AnonChat_assets/assets",
+        "dist/AnonChat_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}

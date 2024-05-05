@@ -1,0 +1,10 @@
+type chat = 
+ record {
+   message: text;
+   sender: text;
+ };
+service : {
+  createNewRoom: (text) -> () oneway;
+  getMessage: (text) -> (vec chat);
+  sendMessage: (text, text, text) -> () oneway;
+}
